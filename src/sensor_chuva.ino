@@ -23,7 +23,7 @@ void setup() {
   moverServo(90); 
   
   w = digitalRead(pinoSensor); 
-} // <--- Chave corrigida bem aqui!
+} 
 
 void loop() {
   b = w;                   
