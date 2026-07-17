@@ -2,12 +2,43 @@
 
 Este projeto consiste no desenvolvimento e automação de uma maquete residencial utilizando a plataforma Arduino. O sistema integra múltiplos sensores e atuadores para gerenciar de forma inteligente um varal automatizado, um sensor de aproximação para garagem, iluminação pública externa multifuncional e um sistema de campainha.
 
+---
+
+## 📸 Demonstração do Projeto
+
+Aqui está o visual da maquete residencial finalizada e os diagramas elétricos montados para as conexões do Arduino:
+
+<div align="center">
+  <table border="1">
+    <tr>
+      <th align="center">Maquete da Casa Inteligente</th>
+      <th align="center">Esquema Elétrico (Chuva e Servo)</th>
+      <th align="center">Esquema Elétrico (Campainha)</th>
+    </tr>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="schematics/Imagem do WhatsApp 2026-07-17 às 17:31:17.jpeg" width="250" alt="Maquete Real">
+      </td>
+      <td align="center" valign="middle">
+        <img src="schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview (1).png" width="380" alt="Circuito Chuva">
+      </td>
+      <td align="center" valign="middle">
+        <img src="schematics/campainha_-removebg-preview (1).png" width="220" alt="Circuito Campainha">
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
 ## 🛠️ Funcionalidades do Sistema
 
 * **Varal Automatizado (Proteção contra Chuva):** Utiliza um sensor de chuva conectado à porta analógica. Ao detectar as primeiras gotas (leitura abaixo do limiar), um servo motor SG90 é acionado para recolher o varal para a área coberta (90°).
 * **Sensor de Vaga/Aproximação da Garagem:** Um sensor ultrassônico mede a distância de um veículo. Se o carro estiver a menos de 10 cm, um LED de alerta acende na garagem.
 * **Iluminação Pública Inteligente:** Um sensor de luz LDR monitora a luminosidade ambiente. Ao escurecer, o sistema aciona simultaneamente 4 postes de iluminação externa.
 * **Campainha Residencial:** Um botão (campainha) integrado que aciona instantaneamente um aviso sonoro por meio de um buzzer ativo.
+
+---
 
 ## 🔌 Esquema de Conexão dos Pinos
 
@@ -26,13 +57,7 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 | **Poste de Luz 4** | Digital | `6` | Saída para o LED do Poste 4 |
 | **Botão da Campainha** | Digital | `7` | Entrada do sinal do botão |
 
-## 📸 Demonstração do Projeto
-
-Aqui está o visual da maquete residencial finalizada e os diagramas elétricos montados para as conexões do Arduino:
-
-| Maquete da Casa Inteligente | Esquema Elétrico (Chuva e Servo) | Esquema Elétrico (Campainha) |
-| :---: | :---: | :---: |
-| ![Maquete Real](schematics/Imagem%20do%20WhatsApp%202026-07-17%20às%2017:31:17.jpeg) | ![Circuito Chuva](schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview%20(1).png) | ![Circuito Campainha](schematics/campainha_-removebg-preview%20(1).png) |
+---
 
 ## 🚀 Como Executar o Projeto
 
