@@ -26,6 +26,14 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 | **Poste de Luz 4** | Digital | `6` | Saída para o LED do Poste 4 |
 | **Botão da Campainha** | Digital | `7` | Entrada do sinal do botão |
 
+## 📸 Demonstração do Projeto
+
+Aqui está o visual da maquete residencial finalizada e os diagramas elétricos montados para as conexões do Arduino:
+
+| Maquete da Casa Inteligente | Esquema Elétrico (Chuva e Servo) | Esquema Elétrico (Campainha) |
+| :---: | :---: | :---: |
+| ![Maquete Real](schematics/Imagem%20do%20WhatsApp%202026-07-17%20às%2017:31:17.jpeg) | ![Circuito Chuva](schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview%20(1).png) | ![Circuito Campainha](schematics/campainha_-removebg-preview%20(1).png) |
+
 ## 🚀 Como Executar o Projeto
 
 1. Monte o circuito seguindo a tabela de pinos acima.
