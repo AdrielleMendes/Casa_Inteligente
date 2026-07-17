@@ -1,70 +1,37 @@
 # 🏠 Maquete de Casa Inteligente Automatizada
 
-Este projeto consiste no desenvolvimento e automação de uma maquete residencial utilizando a plataforma Arduino. O sistema integra múltiplos sensores e atuadores para gerenciar de forma inteligente a segurança contra incêndios, proteção de roupas contra a chuva e eficiência energética através de iluminação automatizada.
-
----
+Este projeto consiste no desenvolvimento e automação de uma maquete residencial utilizando a plataforma Arduino. O sistema integra múltiplos sensores e atuadores para gerenciar de forma inteligente um varal automatizado, um sensor de aproximação para garagem, iluminação pública externa multifuncional e um sistema de campainha.
 
 ## 🛠️ Funcionalidades do Sistema
 
-1. **Varal Automatizado (Proteção contra Chuva):** Utiliza o sensor de chuva MH-RD. Ao detectar as primeiras gotas, um servo motor SG90 é acionado imediatamente para recolher a haste do varal para uma área coberta.
-2. **Iluminação Interna Inteligente:** Um sensor de presença PIR gerencia o LED interno, acendendo as luzes apenas quando houver movimentação nos cômodos.
-3. **Iluminação Pública (Poste Externo):** Um sensor de luz LDR atua como fotocélula, acendendo o LED do poste externo automaticamente assim que o ambiente escurece.
-
----
-
-## 📋 Lista de Materiais
-
-Abaixo estão os componentes utilizados no projeto, conforme especificado no documento de referência `materiais casa inteligente.pdf` localizado na pasta `docs/` deste repositório:
-
-### 1. Placa Principal e Energia
-* **1x** Placa de Arduino
-* **1x** Fonte de Alimentação 9V ou Clipe de Bateria 9V para Arduino
-
-### 2. Sensores (Entradas)
-* **1x** Módulo Sensor de Chuva (MH-RD)
-* **1x** Sensor de Presença Movimento PIR (HC-SR501)
-* **1x** Sensor de Luz LDR de 5mm
-* **1x** Módulo Sensor de Chama IR (Fogo)
-
-### 3. Atuadores e Sinalizadores (Saídas)
-* **1x** Micro Servo Motor 9g SG90
-* **1x** Buzzer Ativo 5V
-* **1x** LED Difuso 5mm Vermelho ou Amarelo (Luz interna)
-* **1x** LED Difuso 5mm Branco ou Verde (Luz do poste)
-
-### 4. Componentes de Conexão e Proteção
-* **1x** Protoboard de 400 ou 830 pontos
-* **1x** Kit de Cabos Jumpers Macho-Macho e Macho-Fêmea
-* **2x** Resistores de 220 $\Omega$ (para os LEDs)
-* **1x** Resistor de 10k $\Omega$ (para o divisor de tensão do LDR)
-
-### 5. Materiais para a Estrutura (Maquete)
-* Placa de Isopor Grosso (para a base e embutir a fiação)
-* Cola quente, palitos de picolé/arame rígido e linha de costura (para o mecanismo mecânico do varal)
-
----
+* **Varal Automatizado (Proteção contra Chuva):** Utiliza um sensor de chuva conectado à porta analógica. Ao detectar as primeiras gotas (leitura abaixo do limiar), um servo motor SG90 é acionado para recolher o varal para a área coberta (90°).
+* **Sensor de Vaga/Aproximação da Garagem:** Um sensor ultrassônico mede a distância de um veículo. Se o carro estiver a menos de 10 cm, um LED de alerta acende na garagem.
+* **Iluminação Pública Inteligente:** Um sensor de luz LDR monitora a luminosidade ambiente. Ao escurecer, o sistema aciona simultaneamente 4 postes de iluminação externa.
+* **Campainha Residencial:** Um botão (campainha) integrado que aciona instantaneamente um aviso sonoro por meio de um buzzer ativo.
 
 ## 🔌 Esquema de Conexão dos Pinos
 
 | Componente | Tipo de Pino | Pino Arduino | Observação |
 | :--- | :--- | :--- | :--- |
-| **Sensor de Chuva (MH-RD)** | Digital | `D2` | Conectado ao pino DO do sensor |
-| **Sensor PIR (HC-SR501)** | Digital | `D3` | Sensor de presença interno |
-| **LED Interno** | Digital | `D4` | Em série com resistor de 220 $\Omega$ |
-| **LED Externo (Poste)** | Digital | `D5` | Em série com resistor de 220 $\Omega$ |
-| **Sensor de Chama IR** | Digital | `D6` | Conectado ao pino DO do sensor |
-| **Buzzer Ativo** | Digital | `D7` | Sirene do alarme de incêndio |
-| **Servo Motor (SG90)** | Digital (PWM)| `D9` | Controle do braço mecânico do varal |
-| **Sensor de Luz (LDR)** | Analógico | `A1` | Ligado com resistor de 10k $\Omega$ em pull-down |
-
----
+| **Sensor de Chuva** | Analógico | `A0` | Monitoramento analógico do nível de chuva |
+| **Sensor de Luz (LDR)** | Analógico | `A1` | Ligado com divisor de tensão |
+| **Servo Motor (SG90)** | Digital (PWM) | `9` | Controle do braço mecânico do varal |
+| **Buzzer Ativo** | Digital | `10` | Saída sonora da campainha |
+| **Pino Echo (Ultrassônico)**| Digital | `11` | Entrada do pulso do sensor de distância |
+| **Pino Trig (Ultrassônico)**| Digital | `12` | Saída do pulso do sensor de distância |
+| **LED Indicador Garagem**  | Digital | `8` | Alerta de proximidade do carro |
+| **Poste de Luz 1** | Digital | `3` | Saída para o LED do Poste 1 |
+| **Poste de Luz 2** | Digital | `4` | Saída para o LED do Poste 2 |
+| **Poste de Luz 3** | Digital | `5` | Saída para o LED do Poste 3 |
+| **Poste de Luz 4** | Digital | `6` | Saída para o LED do Poste 4 |
+| **Botão da Campainha** | Digital | `7` | Entrada do sinal do botão |
 
 ## 🚀 Como Executar o Projeto
 
-1. Monte o circuito seguindo a tabela de pinos ou o diagrama disponível na pasta `schematics/`.
+1. Monte o circuito seguindo a tabela de pinos acima.
 2. Baixe e instale a [Arduino IDE](https://www.arduino.cc/en/software).
 3. Abra o arquivo correspondente ao código fonte em `src/main/main.ino`.
-4. Conecte o seu Arduino ao computador via cabo USB.
-5. Selecione a placa correta e a porta COM em *Ferramentas*.
+4. Conecte seu Arduino ao computador via cabo USB.
+5. Selecione a placa correta (ex: Arduino Uno) e a porta COM em **Ferramentas**.
 6. Clique em **Carregar (Upload)** para gravar o código na placa.
-7. Abra o *Serial Monitor* (9600 bps) para acompanhar os alertas e leituras dos sensores em tempo real.
+7. Abra o **Serial Monitor** (9600 bps) para acompanhar as leituras em tempo real.
