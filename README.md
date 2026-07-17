@@ -7,9 +7,8 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 ## 🛠️ Funcionalidades do Sistema
 
 1. **Varal Automatizado (Proteção contra Chuva):** Utiliza o sensor de chuva MH-RD. Ao detectar as primeiras gotas, um servo motor SG90 é acionado imediatamente para recolher a haste do varal para uma área coberta.
-2. **Alarme de Incêndio (Segurança Activa):** Um sensor de chama IR monitora o ambiente interno. Caso detecte fogo/fogo iminente, um alarme sonoro (Buzzer ativo) é disparado imediatamente.
-3. **Iluminação Interna Inteligente:** Um sensor de presença PIR gerencia o LED interno, acendendo as luzes apenas quando houver movimentação nos cômodos.
-4. **Iluminação Pública (Poste Externo):** Um sensor de luz LDR atua como fotocélula, acendendo o LED do poste externo automaticamente assim que o ambiente escurece.
+2. **Iluminação Interna Inteligente:** Um sensor de presença PIR gerencia o LED interno, acendendo as luzes apenas quando houver movimentação nos cômodos.
+3. **Iluminação Pública (Poste Externo):** Um sensor de luz LDR atua como fotocélula, acendendo o LED do poste externo automaticamente assim que o ambiente escurece.
 
 ---
 
