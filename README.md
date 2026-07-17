@@ -6,11 +6,16 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 
 ## 📸 Demonstração do Projeto
 
-Aqui está o visual da maquete residencial finalizada e os diagramas elétricos montados para as conexões do Arduino:
+### 💻 Maquete Real da Casa Inteligente
+<div align="center">
+  <img src="schematics/WhatsApp%20Image%202026-07-17%20at%2017.31.17.jpeg" width="450" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 20px;" alt="Maquete Real">
+</div>
 
-| Maquete da Casa Inteligente | Esquema Elétrico (Chuva e Servo) | Esquema Elétrico (Campainha) |
-| :---: | :---: | :---: |
-| ![Maquete Real](schematics/WhatsApp%20Image%202026-07-17%20at%2017.31.17.jpeg) | ![Circuito Chuva](schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview%20(1).png) | ![Circuito Campainha](schematics/campanhia_-removebg-preview%20(1).png) |
+### 🔌 Esquemas Elétricos do Circuito (Arduino)
+<div align="center">
+  <img src="schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview%20(1).png" width="45%" style="border-radius: 8px; background-color: #16161a; padding: 10px; margin-right: 10px;" alt="Circuito Chuva">
+  <img src="schematics/campanhia_-removebg-preview%20(1).png" width="45%" style="border-radius: 8px; background-color: #16161a; padding: 10px;" alt="Circuito Campainha">
+</div>
 
 ---
 
