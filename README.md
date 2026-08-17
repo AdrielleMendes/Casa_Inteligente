@@ -1,17 +1,17 @@
-# 🏠 Maquete de Casa Inteligente Automatizada
+#  Maquete de Casa Inteligente Automatizada
 
 Este projeto consiste no desenvolvimento e automação de uma maquete residencial utilizando a plataforma Arduino. O sistema integra múltiplos sensores e atuadores para gerenciar de forma inteligente um varal automatizado, um sensor de aproximação para garagem, iluminação pública externa multifuncional e um sistema de campainha.
 
 ---
 
-## 📸 Demonstração do Projeto
+##  Demonstração do Projeto
 
-### 💻 Maquete Real da Casa Inteligente
+###  Maquete Real da Casa Inteligente
 <div align="center">
   <img src="schematics/WhatsApp%20Image%202026-07-17%20at%2017.31.17.jpeg" width="450" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 20px;" alt="Maquete Real">
 </div>
 
-### 🔌 Esquemas Elétricos do Circuito (Arduino)
+###  Esquemas Elétricos do Circuito (Arduino)
 <div align="center">
   <img src="schematics/arduino-rain-sensor-servo-motor-wiring-diagram-removebg-preview%20(1).png" width="45%" style="border-radius: 8px; background-color: #16161a; padding: 10px; margin-right: 10px;" alt="Circuito Chuva">
   <img src="schematics/campanhia_-removebg-preview%20(1).png" width="45%" style="border-radius: 8px; background-color: #16161a; padding: 10px;" alt="Circuito Campainha">
@@ -19,7 +19,7 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 
 ---
 
-## 🛠️ Funcionalidades do Sistema
+##  Funcionalidades do Sistema
 
 * **Varal Automatizado (Proteção contra Chuva):** Utiliza um sensor de chuva conectado à porta analógica. Ao detectar as primeiras gotas (leitura abaixo do limiar), um servo motor SG90 é acionado para recolher o varal para a área coberta (90°).
 * **Sensor de Vaga/Aproximação da Garagem:** Um sensor ultrassônico mede a distância de um veículo. Se o carro estiver a menos de 10 cm, um LED de alerta acende na garagem.
@@ -28,7 +28,7 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 
 ---
 
-## 🔌 Esquema de Conexão dos Pinos
+##  Esquema de Conexão dos Pinos
 
 | Componente | Tipo de Pino | Pino Arduino | Observação |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@ Este projeto consiste no desenvolvimento e automação de uma maquete residencia
 
 ---
 
-## 🚀 Como Executar o Projeto
+##  Como Executar o Projeto
 
 1. Monte o circuito seguindo a tabela de pinos acima.
 2. Baixe e instale a [Arduino IDE](https://www.arduino.cc/en/software).
